@@ -1,0 +1,511 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #06120e;
+  --panel: #0d2119;
+  --panel-light: #132c21;
+  --green: #43f5a0;
+  --mint: #a8ffd3;
+  --text: #effff5;
+  --muted: #91aa9b;
+  --border: rgba(145, 255, 190, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px 15px;
+  background:
+    radial-gradient(circle at 10% 0%, #123b2a 0%, transparent 35%),
+    radial-gradient(circle at 100% 100%, #0a3020 0%, transparent 35%),
+    var(--bg);
+  font-family: Inter, Arial, sans-serif;
+  color: var(--text);
+}
+
+.app {
+  max-width: 440px;
+  margin: auto;
+  padding: 25px;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: rgba(9, 26, 18, 0.92);
+  box-shadow: 0 25px 80px #00000055;
+  backdrop-filter: blur(20px);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--green);
+  letter-spacing: -1px;
+}
+
+.tag {
+  font-size: 9px;
+  background: #173e2b;
+  color: var(--green);
+  padding: 8px 10px;
+  border: 1px solid #2c754e;
+  border-radius: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 1.2;
+  margin-top: 35px;
+  margin-bottom: 8px;
+  letter-spacing: -1px;
+}
+
+h2 {
+  letter-spacing: -0.5px;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.wallet {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 100% 0%, #247c4f 0%, transparent 45%),
+    linear-gradient(135deg, #123e2a, #071a11);
+  color: var(--text);
+  padding: 25px;
+  border: 1px solid #43f5a033;
+  border-radius: 22px;
+  margin-top: 25px;
+  box-shadow: 0 0 35px #43f5a010;
+}
+
+.wallet p {
+  color: var(--mint);
+  font-size: 13px;
+}
+
+.wallet h2 {
+  font-size: 35px;
+  margin: 15px 0;
+  color: var(--green);
+}
+
+.wallet span {
+  font-size: 12px;
+  color: var(--mint);
+}
+
+.stats {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.card {
+  flex: 1;
+  min-width: 0;
+  background: linear-gradient(145deg, #132b20, #0b1b13);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 18px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.card h3 {
+  font-size: 20px;
+  color: var(--green);
+  overflow-wrap: anywhere;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 16px;
+  border: 1px solid #43f5a055;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #43f5a0, #1bc777);
+  color: #062015;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px #43f5a044;
+}
+
+.formBox {
+  margin-top: 20px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--panel);
+}
+
+.formBox h2 {
+  font-size: 20px;
+  color: var(--green);
+}
+
+.formBox label {
+  display: block;
+  margin-top: 15px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.formBox input,
+.formBox select {
+  width: 100%;
+  padding: 13px;
+  margin-top: 7px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #06120e;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.formBox .secondary {
+  background: #173326;
+  color: var(--mint);
+}
+
+.activityBox,
+.partnerBox {
+  margin-top: 22px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--panel);
+}
+
+.activityBox h2,
+.partnerBox h2 {
+  color: var(--green);
+  font-size: 19px;
+  margin-top: 0;
+}
+
+.activityItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.activityItem strong {
+  font-size: 13px;
+}
+
+.activityItem p {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.pending {
+  color: #ffd879;
+  background: #5b451b55;
+  border: 1px solid #ffd87933;
+  border-radius: 20px;
+  padding: 6px 9px;
+  font-size: 11px;
+}
+
+.verified {
+  color: var(--green);
+  background: #1a593755;
+  border: 1px solid #43f5a044;
+  border-radius: 20px;
+  padding: 6px 9px;
+  font-size: 11px;
+}
+
+.partnerBox {
+  background: linear-gradient(145deg, #10271b, #091810);
+}
+
+.partnerBox p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.footer {
+  text-align: center;
+  color: #698575;
+  font-size: 10px;
+  margin-top: 25px;
+}
+
+.appNav {
+  display: flex;
+  gap: 5px;
+  padding: 6px;
+  margin-bottom: 25px;
+  background: #07160f;
+  border: 1px solid rgba(145, 255, 190, 0.15);
+  border-radius: 15px;
+  overflow-x: auto;
+}
+
+.navBtn {
+  flex: 1;
+  min-width: 65px;
+  margin: 0;
+  padding: 12px 8px;
+  background: transparent;
+  color: #91aa9b;
+  border: none;
+  border-radius: 10px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.navBtn.active {
+  background: #173e2b;
+  color: #43f5a0;
+  box-shadow: 0 0 15px #43f5a015;
+}
+
+.navBtn:hover {
+  transform: none;
+  box-shadow: none;
+  background: #173e2b;
+  color: #43f5a0;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.pageTitle {
+  color: #43f5a0;
+  font-size: 25px;
+  margin-top: 15px;
+}
+
+.pageDescription {
+  color: #91aa9b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.marketBanner {
+  margin-top: 22px;
+  padding: 22px;
+  border: 1px solid #43f5a033;
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 100% 0%, #236e4733, transparent 55%),
+    linear-gradient(145deg, #102b1d, #07160f);
+}
+
+.marketBanner span {
+  color: #43f5a0;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.marketBanner h2 {
+  color: #effff5;
+  font-size: 22px;
+  line-height: 1.35;
+}
+
+.marketBanner p {
+  color: #91aa9b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.marketProduct {
+  display: flex;
+  gap: 15px;
+  margin-top: 16px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: linear-gradient(145deg, #132b20, #0b1b13);
+}
+
+.productIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 65px;
+  height: 65px;
+  border-radius: 16px;
+  background: #1b3d2a;
+  font-size: 30px;
+}
+
+.productInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.productTag {
+  color: #43f5a0;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.productInfo h2 {
+  margin: 8px 0;
+  color: #effff5;
+  font-size: 18px;
+}
+
+.productInfo p {
+  color: #91aa9b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.productInfo strong {
+  display: block;
+  color: #43f5a0;
+  font-size: 21px;
+  margin-top: 12px;
+}
+
+.productInfo small {
+  color: #91aa9b;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.productInfo button {
+  margin-top: 12px;
+  padding: 12px;
+  font-size: 12px;
+}
+
+.impactHero {
+  text-align: center;
+  margin-top: 25px;
+  padding: 25px 18px;
+  border: 1px solid #43f5a033;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 50% 0%, #236e4744, transparent 60%),
+    linear-gradient(145deg, #102b1d, #07160f);
+}
+
+.impactOrb {
+  width: 170px;
+  height: 170px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, #0b2116 55%, transparent 57%),
+    conic-gradient(#43f5a0 0deg 280deg, #183729 280deg 360deg);
+  box-shadow:
+    0 0 25px #43f5a022,
+    inset 0 0 20px #43f5a022;
+}
+
+.impactOrb span {
+  display: block;
+  color: #91aa9b;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.impactOrb strong {
+  color: #43f5a0;
+  font-size: 48px;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.impactOrb small {
+  color: #91aa9b;
+  font-size: 12px;
+}
+
+.impactHero h2 {
+  color: #effff5;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.impactHero p {
+  color: #91aa9b;
+  font-size: 12px;
+}
+
+.impactLabel {
+  color: #43f5a0;
+  font-size: 10px;
+}
+
+.progressItem {
+  margin-top: 22px;
+}
+
+.progressHeading {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: #effff5;
+  font-size: 12px;
+}
+
+.progressHeading strong {
+  color: #43f5a0;
+}
+
+.progressTrack {
+  height: 9px;
+  margin-top: 12px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #1b3828;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #1bc777, #43f5a0);
+  box-shadow: 0 0 15px #43f5a044;
+  transition: width 0.5s ease;
+}
+
+.progressItem p {
+  color: #91aa9b;
+  font-size: 11px;
+}

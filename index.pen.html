@@ -1,0 +1,253 @@
+
+<div class="app">
+  
+<nav class="appNav">
+  <button class="navBtn active" onclick="showPage('home', this)">⌂ Home</button>
+  <button class="navBtn" onclick="showPage('walletPage', this)">◈ Wallet</button>
+  <button class="navBtn" onclick="showPage('collectPage', this)">＋ Collect</button>
+  <button class="navBtn" onclick="showPage('marketPage', this)">♧ Market</button>
+  <button class="navBtn" onclick="showPage('impactPage', this)">↗ Impact</button>
+</nav>
+  
+<div id="home" class="page active">
+  <div class="top">
+    <div class="logo">🌱 EcoFund</div>
+    <div class="tag">DEMO WALLET</div>
+  </div>
+
+  <h1>Good morning, Merwin.</h1>
+  <p class="muted">Here's your sustainability snapshot.</p>
+
+  <div class="wallet">
+    <p>Demo rewards balance</p>
+    <h2 id="balance">₹1,284.00</h2>
+    <span>🌿 Turning waste into value</span>
+  </div>
+
+  <div class="stats">
+    <div class="card">
+      <p>Plastic collected</p>
+      <h3 id="weight">128.4 kg</h3>
+    </div>
+    <div class="card">
+      <p>Verified collections</p>
+      <h3 id="verified">12</h3>
+    </div>
+  </div>
+
+  <button onclick="openForm()">＋ Record collection</button>
+
+<div class="activityBox">
+  <h2>Recent activity</h2>
+  <div id="activityList">
+    <div class="activityItem">
+      <div>
+        <strong>Plastic bottle collection</strong>
+        <p>10 kg · PET bottles</p>
+      </div>
+      <span class="pending">Pending</span>
+    </div>
+  </div>
+</div>
+
+<div class="partnerBox">
+  <h2>Collection Partner</h2>
+  <p>Review and verify submitted collections.</p>
+  <button onclick="verifyLatest()">Verify latest collection</button>
+</div>
+</div>
+
+<div id="collectPage" class="page">
+  <h1 class="pageTitle">Record Plastic Collection</h1>
+  <p class="pageDescription">
+    Enter the plastic type and weight to calculate your estimated rewards.
+  </p>
+
+  <div id="collectionForm" class="formBox">
+    <h2>Record plastic collection</h2>
+
+    <label>Plastic type</label>
+    <select id="plasticType">
+      <option value="10">PET bottles — ₹10/kg</option>
+      <option value="14">HDPE plastic — ₹14/kg</option>
+      <option value="6">Mixed plastic — ₹6/kg</option>
+      <option value="8">Plastic packaging — ₹8/kg</option>
+    </select>
+
+    <label>Weight in kilograms</label>
+    <input id="plasticWeight" type="number" min="0.1" step="0.1" placeholder="Example: 10">
+
+    <p id="estimate">Estimated value: ₹0.00</p>
+
+    <button onclick="submitCollection()">Submit collection</button>
+    <button class="secondary" onclick="closeForm()">Cancel</button>
+  </div>
+</div>
+<div id="walletPage" class="page">
+  <h1 class="pageTitle">EcoWallet</h1>
+  <p class="pageDescription">
+    Your rewards, transactions, and sustainable impact—all in one place.
+  </p>
+
+  <div class="wallet">
+    <p>Available demo rewards</p>
+    <h2 id="walletBalance">₹1,384.00</h2>
+    <span>🌱 Rewards earned through verified collections</span>
+  </div>
+
+
+<div class="activityBox">
+  <h2>Recent transactions</h2>
+  <div id="transactionList">
+    <p>No new transactions yet.</p>
+  </div>
+</div>
+
+  <div class="partnerBox">
+    <h2>Rewards information</h2>
+    <p>
+      Your rewards are calculated using the verified weight of plastic
+      and the illustrative sample rate for its category.
+    </p>
+  </div>
+</div>
+  
+<div id="marketPage" class="page">
+  <h1 class="pageTitle">Eco Marketplace</h1>
+  <p class="pageDescription">
+    Discover sustainable materials made from recovered plastic.
+  </p>
+
+  <div class="marketBanner">
+    <span>♻️ ECOFILIUM PARTNERS</span>
+    <h2>Waste becomes the foundation of tomorrow.</h2>
+    <p>Explore materials designed for a more circular future.</p>
+  </div>
+
+  <div class="marketProduct">
+    <div class="productIcon">🧱</div>
+    <div class="productInfo">
+      <span class="productTag">RECYCLED MATERIAL</span>
+      <h2>EcoBricks</h2>
+      <p>Durable construction blocks made using recovered plastic.</p>
+      <strong>₹35 <small>/ piece</small></strong>
+      <button onclick="addToCart('EcoBricks', 35)">＋ Add to cart</button>
+    </div>
+  </div>
+
+  <div class="marketProduct">
+    <div class="productIcon">🟩</div>
+    <div class="productInfo">
+      <span class="productTag">OUTDOOR SOLUTIONS</span>
+      <h2>EcoPavers</h2>
+      <p>Sample recycled-material pavers for outdoor spaces.</p>
+      <strong>₹50 <small>/ piece</small></strong>
+      <button onclick="addToCart('EcoPavers', 50)">＋ Add to cart</button>
+    </div>
+  </div>
+
+  <div class="marketProduct">
+    <div class="productIcon">🏡</div>
+    <div class="productInfo">
+      <span class="productTag">SUSTAINABLE DESIGN</span>
+      <h2>EcoTiles</h2>
+      <p>Modern tiles made with a circular-material concept.</p>
+      <strong>₹80 <small>/ piece</small></strong>
+      <button onclick="addToCart('EcoTiles', 80)">＋ Add to cart</button>
+    </div>
+  </div>
+
+  <div class="activityBox">
+    <h2>Demo Cart</h2>
+    <div id="cartItems">
+      <p>Your cart is empty. Add a product to begin.</p>
+    </div>
+
+    <h3 id="cartTotal">Total: ₹0</h3>
+
+    <button onclick="checkoutDemo()">Continue to demo checkout</button>
+  </div>
+
+  <p class="pageDescription">
+    Illustrative product names and prices for the EcoFund assignment prototype.
+    Actual specifications, prices, and availability would require confirmation.
+  </p>
+</div>
+  
+<div id="impactPage" class="page">
+  <h1 class="pageTitle">Your Impact</h1>
+  <p class="pageDescription">
+    Every collection moves us closer to a circular future.
+  </p>
+
+  <div class="impactHero">
+    <div class="impactOrb">
+      <div>
+        <span>DEMO IMPACT</span>
+        <strong id="impactScore">78</strong>
+        <small>/100</small>
+      </div>
+    </div>
+
+    <h2>Small actions. Planet-sized possibilities.</h2>
+    <p>Your sustainability journey, visualized.</p>
+  </div>
+
+  <div class="stats">
+    <div class="card">
+      <p>Plastic recovered</p>
+      <h3 id="impactWeight">138.4 kg</h3>
+      <span class="impactLabel">♻️ Material diverted</span>
+    </div>
+
+    <div class="card">
+      <p>Collections verified</p>
+      <h3 id="impactVerified">13</h3>
+      <span class="impactLabel">✓ Partner reviewed</span>
+    </div>
+  </div>
+
+  <div class="activityBox">
+    <h2>Environmental progress</h2>
+
+    <div class="progressItem">
+      <div class="progressHeading">
+        <span>Plastic recovery goal</span>
+        <strong id="goalText">69%</strong>
+      </div>
+      <div class="progressTrack">
+        <div class="progressFill" id="goalBar" style="width:69%"></div>
+      </div>
+      <p>Goal: recover 200 kg of plastic</p>
+    </div>
+
+    <div class="progressItem">
+      <div class="progressHeading">
+        <span>Verified collection goal</span>
+        <strong id="verifiedGoalText">65%</strong>
+      </div>
+      <div class="progressTrack">
+        <div class="progressFill" id="verifiedGoalBar" style="width:65%"></div>
+      </div>
+      <p>Goal: complete 20 verified collections</p>
+    </div>
+  </div>
+
+  <div class="partnerBox">
+    <h2>🌍 The EcoFund mission</h2>
+    <p>
+      Connect households, collection partners, and sustainable
+      material producers—so recovered plastic can become a
+      valuable resource again.
+    </p>
+  </div>
+
+  <p class="pageDescription">
+    Impact figures are illustrative demo data, not independently
+    verified environmental measurements.
+  </p>
+</div>
+  <p class="footer">EcoFund · Demo data only</p>
+  
+</div>
+</div>
